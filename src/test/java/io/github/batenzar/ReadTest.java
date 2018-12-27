@@ -14,4 +14,10 @@ public class ReadTest {
 	public void testOne() {
 		Assert.assertEquals(1, Util.countTag("#AAA"));
 	}
+	
+	@Test
+	public void testSpace() {
+		Assert.assertEquals(1, Util.countTag("#AA A"));
+		Assert.assertEquals(2, Util.countTag("#AA A #BB"));
+	}
 }
